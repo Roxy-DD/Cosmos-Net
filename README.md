@@ -102,8 +102,8 @@ For developers who want to run the full Cosmos-Net engine locally.
 如果你是开发者，想在本地运行完整的引擎：
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cosmos_net.git
-cd cosmos_net
+git clone https://github.com/Roxy-DD/Cosmos-Net.git
+cd Cosmos-Net
 pip install -r requirements.txt
 
 # Run the Interface
