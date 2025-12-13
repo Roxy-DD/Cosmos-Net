@@ -66,6 +66,16 @@ streamlit run app.py
     - [English Manual](docs/USER_MANUAL_EN.md)
     - [中文用户手册](docs/USER_MANUAL_CN.md)
 
+## 🎓 Tutorials / 教程
+
+**Build Your Own Baby Universe (5 Minutes)**  
+**极简入门：5分钟创造你的数字宇宙**
+
+| Language | Notebook |
+| :---: | :---: |
+| **English** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe_EN.ipynb) |
+| **中文** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe.ipynb) |
+
 ## 📂 Repository Structure / 仓库结构
 
 - `cosmos_net.py`: **Core Logic**. `CosmosResonator` implementation.
