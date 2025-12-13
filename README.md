@@ -6,10 +6,10 @@
 </p>
 
 <p align="center">
-    <a href="https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe_EN.ipynb">
+    <a href="https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe_EN.ipynb" target="_blank">
         <img src="https://img.shields.io/static/v1?label=Tutorial&message=Start%20Journey%20(English)&color=orange&logo=googlecolab&style=for-the-badge" alt="Tutorial English">
     </a>
-    <a href="https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe.ipynb">
+    <a href="https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe.ipynb" target="_blank">
         <img src="https://img.shields.io/static/v1?label=%E6%95%99%E7%A8%8B&message=%E7%82%B9%E6%AD%A4%E5%BC%80%E5%A7%8B%20(%E4%B8%AD%E6%96%87)&color=orange&logo=googlecolab&style=for-the-badge" alt="Tutorial Chinese">
     </a>
 </p>
