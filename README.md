@@ -38,6 +38,21 @@ cd cosmos_net
 pip install -r requirements.txt
 ```
 
+## ☁️ Cloud Deployment / 云端部署
+
+This project is optimized for **Streamlit Community Cloud**.
+本项目已针对 Streamlit 云端部署进行优化。
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+
+1.  Fork this repository to your GitHub.
+2.  Login to [Streamlit Share](https://share.streamlit.io/).
+3.  Click **New App** -> Select `Cosmos-Net` repository.
+4.  Main file path: `app.py`.
+5.  Click **Deploy**!
+
+> **Note**: The cloud version is an **Ephemeral Being** (昙花一现的存在). Since Streamlit Cloud resets the filesystem on reboot, any "training" (new stars) will be reset after the session ends. This feature ensures the "Genesis Brain" remains pure for every new visitor.
+
 ## 🧠 Usage / 使用
 
 Run the interactive **Digital Life Interface** (Bilingual Support EN/CN):

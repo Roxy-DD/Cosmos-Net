@@ -1,7 +1,7 @@
 streamlit
-torch
 numpy
 matplotlib
 networkx
 scikit-learn
+scipy
 Pillow
