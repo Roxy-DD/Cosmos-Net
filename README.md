@@ -3,6 +3,9 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17920275.svg)](https://doi.org/10.5281/zenodo.17920275)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+[![Tutorial: CN](https://img.shields.io/static/v1?label=Tutorial&message=Chinese&color=orange&logo=googlecolab)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe.ipynb)
+[![Tutorial: EN](https://img.shields.io/static/v1?label=Tutorial&message=English&color=orange&logo=googlecolab)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe_EN.ipynb)
+
 
 > **"The universe is not a static state of Being, but an eternal process of Becoming."**
 > **"宇宙并非静止的存在，而是永恒生成的过场。"**
