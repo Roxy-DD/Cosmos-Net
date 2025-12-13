@@ -80,10 +80,14 @@ It embraces contradictions. When it sees something that contradicts its current 
 
 ---
 
-## ☁️ Cloud Demo (Streamlit)
+## ☁️ Cloud Application: Digit Recognition (Frame Landing)
+## 云端应用：手写数字识别（落地验证）
 
-Want to chat with a more advanced version?
-我们提供了一个基于云端的交互式版本：
+While the "Baby Universe" tutorial above shows you the **soul** (Philosophy & Theory) of Cosmos-Net, this Cloud Application demonstrates its **body** (Practical Capability).
+如果说上面的“电子宠物宇宙”展示了 Cosmos-Net 的 **灵魂**（哲学与理论），那么这个云端应用则展示了它的 **肉体**（实际落地能力）。
+
+It is a fully functional **0-9 Digit Recognition System** powered by the same topological growth engine.
+这是一个完全基于同样的拓扑生长引擎构建的 **0-9 手写数字识别系统**。
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
 
