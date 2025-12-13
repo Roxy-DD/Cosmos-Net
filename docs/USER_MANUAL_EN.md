@@ -37,9 +37,9 @@ The "Eye" of the brain.
 
 ### 3.3 Left Panel: Interaction
 How you teach it.
-*   **Default**: If it predicts correctly, you do nothing.
-*   **Correction**: If it is wrong (e.g., sees a 5 as a 3), enter the correct label `3`.
-*   **Send Mental Wave (Evolve)**: Click the button. This triggers **Law II (Inverse Element Indexing)**. If your correction contradicts its existing belief, the brain structure will physically grow to accommodate this paradox.
+*   **Default**: If it predicts correctly with high Gravity (G), you do nothing.
+*   **Reinforce**: if it predicts **correctly** but with low Gravity (e.g., G < 0.9), it means it's guessing or hasn't seen this style before. Click "Send Mental Wave" to imprint this sample, strengthening the gravitational field for this category.
+*   **Correct**: If it is **wrong** (e.g., sees a 5 as a 3), enter the correct label `3` and send. This triggers **Law II**, forcing new neuron growth.
 
 ### 3.4 Right Panel: Cosmos Topology
 The View Inside.
