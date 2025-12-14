@@ -113,13 +113,12 @@ class RightHemisphere:
             else:
                 return "New_Creation (Right Brain Star)"
 
-                return "New_Creation (Right Brain Star)"
-
-    def dream(self):
+    def dream(self, threshold=0.99, noise_level=0.0):
         """
         The Dreamtime: Memory Consolidation & Pruning.
         1. Prune: Remove weak memories (Mass <= 2).
-        2. Consolidate: Merge very similar stars (Gravity > 0.99).
+        2. Consolidate: Merge very similar stars (Gravity > threshold).
+        3. Noise (Sleep Spindles): Inject random noise to escape local optima.
         """
         start_count = len(self.galaxy)
         
@@ -132,6 +131,18 @@ class RightHemisphere:
             self.galaxy = [s for s in self.galaxy if s.mass > 1]
         
         pruned_count = start_count - len(self.galaxy)
+
+        # 1.5 Noise Injection (Sleep Spindles - The Dialectical Leap)
+        # Maybe chaos helps us find better order?
+        if noise_level > 0.0:
+            for star in self.galaxy:
+                # Add noise to normalized vector
+                perturbation = np.random.normal(0, noise_level, star.vector.shape)
+                star.vector += perturbation
+                # Re-normalize to maintain cosine similarity validity
+                norm = np.linalg.norm(star.vector)
+                if norm > 0:
+                     star.vector /= norm
         
         # 2. Consolidate (Merge Similarity)
         # Simple greedy approach: Sort by mass (preserve important ones), then merge smaller into larger.
@@ -147,7 +158,7 @@ class RightHemisphere:
             for kept_star in new_galaxy:
                 if star.label == kept_star.label: # Only merge same concepts
                     gravity = CosmosPhysics.compute_gravity(star.vector, kept_star.vector)
-                    if gravity > 0.99: # Extremely similar
+                    if gravity > threshold: # Extremely similar
                         # Merge star INTO kept_star
                         # Weighted average of vectors
                         total_mass = kept_star.mass + star.mass
@@ -380,12 +391,12 @@ class CorpusCallosum:
         
         return f"{r_msg} | {status_msg}"
 
-    def dream(self):
+    def dream(self, threshold=0.99, noise_level=0.0):
         """
         Enter The Dreamtime.
         """
         # 1. Right Brain consolidates memories
-        r_msg = self.right_hemisphere.dream()
+        r_msg = self.right_hemisphere.dream(threshold=threshold, noise_level=noise_level)
         
         # 2. Left Brain could also prune outliers? (Future)
         

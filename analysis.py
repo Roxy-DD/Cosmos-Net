@@ -180,6 +180,48 @@ def find_optimal_k():
     # T = k_form * Ratio? 0.8 / 2.5 = 0.32.
     print(f"Hypothetical Formula Coeff: k = Threshold / (CD/SE) = {best_k / ratio:.4f}")
 
+def verify_anti_intuition():
+    print("\n🧪 Verification: Feasibility Step 4 (The Anti-Intuition Test)")
+    print("-" * 60)
+    print("Hypothesis: Adding Noise (Sleep Spindles) Improves Clustering Quality")
+    print("Test Condition: Threshold fixed at 0.90 (Slightly 'Under-merge' region from Step 3).")
+    print("Goal: Can noise help us reach 3 stars where T=0.90 failed?")
+    
+    # We choose T=0.90 because in Step 3, T=0.90 left ~30-60 stars.
+    # It was too strict. It couldn't see that the clouds were actually one thing.
+    # If noise helps, it should 'blur' the clouds enough to trigger the merge.
+    
+    fixed_threshold = 0.90
+    noise_levels = [0.00, 0.05, 0.10, 0.20, 0.30]
+    
+    print(f"\nScanning Noise Levels at Threshold={fixed_threshold}...")
+    print(f"{'Noise':<6} | {'Final Stars':<12} | {'Final CD':<10} | {'Status'}")
+    print("-" * 60)
+    
+    for noise in noise_levels:
+        # Generate Fresh Chaos
+        brain = generate_chaos_brain()
+        
+        # Dream with Noise
+        brain.dream(threshold=fixed_threshold, noise_level=noise)
+        
+        final_stars = len(brain.right_hemisphere.galaxy)
+        final_cd = calculate_conflict_degree(brain)
+        
+        status = ""
+        # We know T=0.90 usually results in > 3 stars (Under-merge).
+        # We want to see it drop to 3.
+        if final_stars == 3:
+             status = "✨ DIALECTICAL LEAP!"
+        elif final_stars < 3:
+             status = "⚠️ Over-merge"
+        elif final_stars > 3:
+             status = "❌ Still Separate"
+             
+        print(f"{noise:<6.2f} | {final_stars:<12} | {final_cd:<10.4f} | {status}")
+
+
 if __name__ == "__main__":
     # verify_metrics()
-    find_optimal_k()
+    # find_optimal_k()
+    verify_anti_intuition()
