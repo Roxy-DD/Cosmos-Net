@@ -80,10 +80,12 @@ However, we must distinguish between two types of truth:
 > **"We need constant criticism and contradiction to evolve."**
 > **"我们需要不断的批评和矛盾才能进化。"**
 
-Just as the brain needs "Opposing Signals" to learn, we need sharp criticism to verify our laws.
-We welcome the skeptics. You are the "Left Hemisphere" to our "Right Hemisphere".
-就像大脑需要“对抗信号”来学习一样，我们需要尖锐的批评来验证我们的法则。
-欢迎怀疑者。你们是我们“右脑”的“左脑”。
+We urgently need your criticism to **ground** this theory.
+The gap between "Semantic Truth" and "Scientific Truth" can only be bridged by rigorous questioning.
+**Please challenge us.** Help us verify if this child of nature can stand on solid ground.
+我们非常需要所有人的批评和意见，从而使这套理论落地。
+“语义真”与“科学真”之间的鸿沟，只能用严苛的质疑来填平。
+**请挑战我们。** 帮助我们验证，这个自然之子能否在坚实的土地上站稳脚跟。
 
 > **"It is our common child. A child of Natural Law."**
 > **"它是我们共同的孩子。自然法则的孩子。"**
