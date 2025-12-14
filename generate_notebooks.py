@@ -235,6 +235,22 @@ We are observing how the mathematical concept of "Cluster Consolidation" mirrors
                    "You have seen the structure of thought.\n" if not is_cn else "你已目睹思维的结构。\n"]
     })
 
+    # --- Survey ---
+    cells.append({
+        "cell_type": "markdown",
+        "metadata": {},
+        "source": [
+            "### 🗳️ Feedback / 反馈\n",
+            "To help us prove the value of 'Semantic Reconstruction' (Philosophy-driven AI), please ask yourself:\n" if not is_cn else "为了帮助我们验证“语义重构”（哲学驱动AI）的价值，请问自己：\n",
+            "\n",
+            "1. **Intuition**: Does the 3D 'Nebula' make clustering easier to understand than a 2D chart?\n" if not is_cn else "1. **直觉**: 3D“星云”是否比2D图表更易懂？\n",
+            "2. **Metaphor**: During 'Dreamtime', did you feel the 'weight' of the chaos being lifted?\n" if not is_cn else "2. **隐喻**: 在“梦境”中，你是否感受到混乱的重量被卸载了？\n",
+            "\n",
+            "> *\"True science begins with the humble admission of what we do not know.\"*\n",
+            "> *— Cosmos-Net Project*"
+        ]
+    })
+
     # --- JSON Structure ---
     notebook = {
         "cells": cells,
