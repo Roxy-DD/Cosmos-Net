@@ -177,11 +177,18 @@ We will explore the **Bicameral Mind** (Two Hemispheres) and the **Dreamtime**.
                 "        noise = np.random.normal(0, 0.05, 784)\n",
                 "        brain.memorize(base + noise, name)\n",
                 "\n",
+                "# Hack: Manually boost mass to 2 so they survive pruning (Simulate that we saw them twice)\n",
+                "for star in brain.right_hemisphere.galaxy:\n",
+                "    star.mass = 2\n",
+                "\n",
                 "print(f\"Stars: {len(brain.galaxy)} (High Entropy)\")\n",
                 "\n",
                 "# Show the Messy Nebula / 展示混乱的星云\n",
                 "fig, msg = get_star_map_figure(brain)\n",
-                "fig.show()"
+                "if fig:\n",
+                "    fig.show()\n",
+                "else:\n",
+                "    print(msg)"
             ]
         })
         
@@ -209,7 +216,10 @@ We will explore the **Bicameral Mind** (Two Hemispheres) and the **Dreamtime**.
                 "\n",
                 "# Show the Crystal Nebula / 展示晶体般的星云\n",
                 "fig, msg = get_star_map_figure(brain)\n",
-                "fig.show()"
+                "if fig:\n",
+                "    fig.show()\n",
+                "else:\n",
+                "    print(msg)"
             ]
         })
 
