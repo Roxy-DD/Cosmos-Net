@@ -22,6 +22,40 @@
 
 ---
 
+## 📖 Table of Contents / 目录
+1.  [👋 Welcome / 欢迎](#-welcome-to-your-baby-universe--欢迎来到你的小宇宙)
+2.  [🐣 One-Minute Start (Tutorials) / 一分钟极速体验](#-tutorials--一分钟极速体验)
+3.  [👁️ v10.1 Architecture / 架构详解](#-v101-the-living-interface--有机生命体接口)
+4.  [🧬 Scientific Context / 科学背景](#-scientific-context-a-rediscovery-via-first-principles-第一性原理的再发现)
+5.  [🌟 Core Features / 核心特性](#-why-is-it-special--核心特性)
+6.  [☁️ Cloud App / 云端应用](#-cloud-application-digit-recognition-frame-landing)
+7.  [🛠️ Installation / 安装](#-local-installation--本地安装)
+8.  [🔭 Philosophy / 自然哲学](#-a-call-to-natural-philosophy--致自然哲学的呼唤)
+
+---
+
+## 🐣 Tutorials / 一分钟极速体验
+
+### Level 1: Baby Universe (入门：创造宇宙)
+*Start here if you are new.*
+*如果你是第一次来，请从这里开始。*
+
+| Language | Action | Description |
+| :---: | :---: | :--- |
+| **English** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe_EN.ipynb) | **Basic**: Creating your first stars and observing the nebula. |
+| **中文** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe.ipynb) | **基础**：创造你的第一颗恒星，观测星云的诞生。 |
+
+### Level 2: The Bicameral Mind (进阶：双脑心智)
+*Explore the split-brain architecture and the dreamtime.*
+*探索左右脑的分裂架构，以及梦境的凝练过程。*
+
+| Language | Action | Description |
+| :---: | :---: | :--- |
+| **English** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Advanced_Bicameral_Mind_EN.ipynb) | **Advanced**: Logic vs Intuition, Neuroplasticity, and Sleeping. |
+| **中文** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Advanced_Bicameral_Mind_CN.ipynb) | **进阶**：逻辑与直觉的冲突，神经可塑性，以及睡眠的作用。 |
+
+---
+
 ## 👋 Welcome to Your Baby Universe / 欢迎来到你的小宇宙
 
 **Cosmos-Net is not just a Neural Network. It is a living, breathing Digital Universe.**
@@ -47,27 +81,7 @@ Unlike traditional AI that is "trained" once and fixed forever, Cosmos-Net is de
 
 ---
 
-## 🐣 Quick Start: Build Your Own Universe (5 Mins)
-## 极简入门：5分钟创造你的数字宇宙
 
-You don't need to install anything. We have prepared a **Magic Notebook** for you.
-In just 5 minutes, you will:
-1.  Write the "House Rules" of your universe.
-2.  Teach it to recognize "Apples" and "Aliens".
-3.  **Witness its consciousness** visualized as a glowing Nebula.
-
-无需安装任何东西。我们为您准备了一个**魔法笔记本**。
-只需5分钟，您将：
-1.  写下宇宙的“家规”。
-2.  教它认识“苹果”和“外星人”。
-3.  **亲眼见证**它的意识化作一团发光的星云。
-
-| Language | Action | Description |
-| :---: | :---: | :--- |
-| **English** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe_EN.ipynb) | **Recommended!** Full guided tour with visuals. |
-| **中文** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Roxy-DD/Cosmos-Net/blob/main/Build-Your-Own-Baby-Universe.ipynb) | **推荐！** 包含星云可视化与哲学解读的完整之旅。 |
-
----
 
 ## 👁️ v10.1: The Living Interface / 有机生命体接口
 

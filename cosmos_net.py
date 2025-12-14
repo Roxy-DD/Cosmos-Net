@@ -399,11 +399,22 @@ DEFAULT_SAVE_FILE = "cosmos_brain.pkl"
 
 def save_brain(brain, filename=DEFAULT_SAVE_FILE):
     # Fix for pickling classes defined in __main__ (Streamlit issue)
-    # We map current classes to module level
-    if brain.__class__.__name__ == "CorpusCallosum":
-        brain.__class__ = CorpusCallosum
-    
-    # Also fix internal components if needed...
+    # We map current classes to module level to handle hot-reloading
+    try:
+        if brain.__class__.__name__ == "CorpusCallosum":
+             brain.__class__ = CorpusCallosum
+        
+        # Recurse into children (Fix for 'RightHemisphere' mismatch error)
+        if hasattr(brain, 'right_hemisphere') and brain.right_hemisphere:
+            if brain.right_hemisphere.__class__.__name__ == "RightHemisphere":
+                brain.right_hemisphere.__class__ = RightHemisphere
+        
+        if hasattr(brain, 'left_hemisphere') and brain.left_hemisphere:
+            if brain.left_hemisphere.__class__.__name__ == "LeftHemisphere":
+                brain.left_hemisphere.__class__ = LeftHemisphere
+                
+    except Exception as e:
+        print(f"Warning: Could not rebind classes: {e}")
     
     with open(filename, 'wb') as f:
         pickle.dump(brain, f)
