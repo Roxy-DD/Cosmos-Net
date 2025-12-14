@@ -203,28 +203,47 @@ We are observing how the mathematical concept of "Cluster Consolidation" mirrors
             "execution_count": None,
             "metadata": {},
             "outputs": [],
-            "source": [
-                "# Dream / 做梦\n",
-                "print(\"💤 Entering Dreamtime...\")\n",
-                "\n",
-                "# Hack: Manually boost mass to 2 so they survive pruning (Simulate that we saw them twice)\n",
-                "# This ensures the 'Chaos' stars aren't just deleted as noise.\n",
-                "for star in brain.right_hemisphere.galaxy:\n",
-                "    star.mass = 2\n",
-                "\n",
-                "report = brain.dream()\n",
-                "print(report)\n",
-                "\n",
-                "# Restore brain to normal state\n",
-                "brain.right_hemisphere.resonance_threshold = 0.85\n",
-                "\n",
-                "# Show the Crystal Nebula / 展示晶体般的星云\n",
-                "fig, msg = get_star_map_figure(brain)\n",
-                "if fig:\n",
-                "    fig.show()\n",
-                "else:\n",
-                "    print(msg)"
-            ]
+            "### 💤 Step 3: The Dialectical Leap (The Anti-Intuition Test)\n",
+            "**Philosophy**: Hegel said \"Negation of Negation\". Science calls it **annealing**.\n",
+            "**Hypothesis**: Sometimes, the brain needs **Noise** (Sleep Spindles) to break local habits and find the true pattern.\n",
+            "**哲学**: 黑格尔称之为“否定之否定”。科学称之为**退火**。\n",
+            "**假设**: 有时，大脑需要**噪声**（睡眠梭形波）来打破局部习惯，找到真正的模式。\n",
+            "\n",
+            "Let's inject noise and see if it helps consolidation."
+        ]
+    })
+    
+    cells.append({
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": [
+            "# Dream with Noise (Sleep Spindles)\n",
+            "# We inject 10% Noise to catalyze the merge.\n",
+            "print(\"💤 Entering Dreamtime (with Sleep Spindles)...\\n\")\n",
+            "\n",
+            "# Hack: Boost mass so they survive pruning\n",
+            "for star in brain.right_hemisphere.galaxy:\n",
+            "    star.mass = 2\n",
+            "\n",
+            "# Call dream with noise_level=0.1\n",
+            "report = brain.dream(threshold=0.85, noise_level=0.1)\n",
+            "print(report)\n",
+            "\n",
+            "# Restore physics\n",
+            "brain.right_hemisphere.resonance_threshold = 0.85\n",
+            "\n",
+            "# Show the Crystal Nebula / 展示晶体般的星云\n",
+            "fig, msg = get_star_map_figure(brain)\n",
+            "if fig:\n",
+            "    fig.show()\n",
+            "else:\n",
+            "    print(msg)"
+        ]
+    })
+
+    # --- Footer ---
         })
 
     # --- Footer ---
