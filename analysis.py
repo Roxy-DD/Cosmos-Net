@@ -84,59 +84,102 @@ def calculate_conflict_degree(brain):
         
     return mean_intra_var / mean_inter_dist
 
-def verify_metrics():
-    print("🧪 Verification: Feasibility Step 2 (Technical Quantification)")
-    print("-" * 60)
-    
+def generate_chaos_brain():
+    """Helper to generate a consistent Chaos Brain."""
     brain = CorpusCallosum()
+    brain.right_hemisphere.resonance_threshold = 10.0 # Force separate stars
     
-    # --- Phase 1: Generated Chaos (Simulate Step 1) ---
-    print("\n[Phase 1] Detecting Chaos...")
-    
-    # 3 Concepts, 600 scattered stars
     centers = [np.random.rand(784) for _ in range(3)]
     labels = ["A", "B", "C"]
     
-    # Force creation of separate stars (Resonance=10.0)
-    brain.right_hemisphere.resonance_threshold = 10.0
-    
     for i in range(200):
         for center, label in zip(centers, labels):
-            noise = np.random.normal(0, 0.2, 784) # High variance for testing CD
+            noise = np.random.normal(0, 0.2, 784)
             brain.memorize(center + noise, label)
             
-    # Boost Mass to simulate 'Real' chaos (mass=2)
+    # Boost mass to survive pruning
     for s in brain.right_hemisphere.galaxy:
         s.mass = 2
         
-    cd_1 = calculate_conflict_degree(brain)
-    se_1 = calculate_system_entropy(brain)
-    print(f"Stats: {len(brain.right_hemisphere.galaxy)} Stars")
-    print(f"Meas: CD={cd_1:.4f} | SE={se_1:.4f}")
+    return brain
+
+def find_optimal_k():
+    print("\n🧪 Verification: Feasibility Step 3 (Critical Threshold Derivation)")
+    print("-" * 60)
+    print("Hypothesis: Threshold = k * (Conflict_Degree / System_Entropy)")
     
-    if cd_1 > 1.0 and se_1 > 5.0:
-        print("✅ PASS: Successfully detected High Entropy/Conflict.")
-    else:
-        print("❌ FAIL: Metrics too low for Chaos.")
+    # 1. Measure Chaos Baseline
+    base_brain = generate_chaos_brain()
+    cd_0 = calculate_conflict_degree(base_brain)
+    se_0 = calculate_system_entropy(base_brain)
+    ratio = cd_0 / se_0
+    
+    print(f"Baseline Chaos: CD={cd_0:.4f}, SE={se_0:.4f}, Ratio(CD/SE)={ratio:.4f}")
+    
+    # 2. Run Sweep
+    print(f"\nScanning k from 0.1 to 2.0...")
+    print(f"{'k':<6} | {'Threshold':<10} | {'Final Stars':<12} | {'Final CD':<10} | {'Status'}")
+    print("-" * 60)
+    
+    best_k = 0
+    best_cd = float('inf')
+    
+    for k in np.arange(0.1, 2.1, 0.1):
+        # Fresh brain per run
+        brain = generate_chaos_brain()
         
-    # --- Phase 2: Dreamtime (Consolidation) ---
-    print("\n[Phase 2] Detecting Order (After Dream)...")
+        # Calculate dynamic threshold
+        # T = k * (CD/SE)
+        # Note: In standard Dream, we hardcode 0.99 inside dream().
+        # Here we must override that logic. We'll modify the threshold used by RightHemisphere.
+        
+        # Calculate dynamic threshold
+        # Hypothesis: T = k * (CD/SE) (Normalized to meaningful range)
+        # Note: CD/SE in chaos is ~2.3 (15/6.4). 0.85/2.3 = 0.36
+        # Let's try raw ratio first, but clamp it.
+        
+        # Actually, let's look at the data structure.
+        # We need T (0.8 ~ 1.0).
+        # CD/SE is ~2.3.
+        # So maybe relation is: T = 1.0 - k * (SE/CD) ? 
+        # Low Entropy -> High Threshold (Precision). High Entropy -> Low Threshold (Tolerance)?
+        # No, High Entropy (Chaos) means we need to MERGE heavily, so Threshold should be LOWER?
+        # Wait, if T is low (0.5), EVERYTHING merges into one blob.
+        # If T is high (0.99), only identical things merge.
+        # To fix Chaos, we want to specific merge the 3 clouds.
+        # So we probably want T around 0.95-0.99.
+        
+        # Let's just sweep T directly first to find the optimal T_opt.
+        # Then check if T_opt relates to CD/SE.
+        calc_threshold = k # Direct sweep for T
+        
+        brain.dream(threshold=calc_threshold)
+        
+        final_stars = len(brain.right_hemisphere.galaxy)
+        final_cd = calculate_conflict_degree(brain)
+        
+        status = ""
+        if final_stars == 3 and final_cd < 0.01:
+            status = "✅ OPTIMAL"
+            if final_cd < best_cd:
+                best_cd = final_cd
+                best_k = k
+        elif final_stars < 3:
+            status = "⚠️ Over-merge"
+        elif final_stars > 3:
+            status = "⚠️ Under-merge"
+            
+        print(f"{k:<6.2f} | {calc_threshold:<10.2f} | {final_stars:<12} | {final_cd:<10.4f} | {status}")
+
+    print("-" * 60)
+    print(f"🏆 Best Threshold Found: {best_k:.2f}")
     
-    # Restore threshold and dream
-    brain.right_hemisphere.resonance_threshold = 0.85
-    brain.dream()
-    
-    cd_2 = calculate_conflict_degree(brain)
-    se_2 = calculate_system_entropy(brain)
-    print(f"Stats: {len(brain.right_hemisphere.galaxy)} Stars")
-    print(f"Meas: CD={cd_2:.4f} | SE={se_2:.4f}")
-    
-    if cd_2 < cd_1 and se_2 < se_1:
-         print("✅ PASS: Metrics dropped significantly.")
-         print(f"    Delta CD: {cd_1:.4f} -> {cd_2:.4f}")
-         print(f"    Delta SE: {se_1:.4f} -> {se_2:.4f}")
-    else:
-         print("❌ FAIL: Metrics did not reflect ordering.")
+    # Back-derive relationship
+    # If CD_0 ~ 15, SE_0 ~ 6. Ratio ~ 2.5.
+    # If Best T ~ 0.80.
+    # T = k_form * Ratio? 0.8 / 2.5 = 0.32.
+    print(f"Hypothetical Formula Coeff: k = Threshold / (CD/SE) = {best_k / ratio:.4f}")
 
 if __name__ == "__main__":
-    verify_metrics()
+    # verify_metrics()
+    find_optimal_k()
