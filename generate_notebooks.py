@@ -203,15 +203,14 @@ We are observing how the mathematical concept of "Cluster Consolidation" mirrors
             "execution_count": None,
             "metadata": {},
             "outputs": [],
-            "### 💤 Step 3: The Dialectical Leap (The Anti-Intuition Test)\n",
-            "**Philosophy**: Hegel said \"Negation of Negation\". Science calls it **annealing**.\n",
-            "**Hypothesis**: Sometimes, the brain needs **Noise** (Sleep Spindles) to break local habits and find the true pattern.\n",
-            "**哲学**: 黑格尔称之为“否定之否定”。科学称之为**退火**。\n",
-            "**假设**: 有时，大脑需要**噪声**（睡眠梭形波）来打破局部习惯，找到真正的模式。\n",
-            "\n",
-            "Let's inject noise and see if it helps consolidation."
-        ]
-    })
+            "source": [
+                "### 💤 Step 3: The Dialectical Leap (The Anti-Intuition Test) / 第三步：辩证飞跃（反直觉测试）\n",
+                "**Philosophy**: Hegel said \"Negation of Negation\". Science calls it **annealing**.\n" if not is_cn else "**哲学**: 黑格尔称之为“否定之否定”。科学称之为**退火**。\n",
+                "**Hypothesis**: Sometimes, the brain needs **Noise** (Sleep Spindles) to break local habits and find the true pattern.\n" if not is_cn else "**假设**: 有时，大脑需要**噪声**（睡眠梭形波）来打破局部习惯，找到真正的模式。\n",
+                "\n",
+                "Let's inject noise and see if it helps consolidation." if not is_cn else "让我们注入噪声，看看是否有助于巩固。"
+            ]
+        })
     
     cells.append({
         "cell_type": "code",
