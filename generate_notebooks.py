@@ -41,8 +41,9 @@ It won't be a black box. You will see every star, every connection.
     
     intro_adv_en = """
 Welcome to the deeper layer.
-We know the brain learns. But how does it **sleep**? How does it handle **conflict**?
-We will explore the **Bicameral Mind** (Two Hemispheres) and the **Dreamtime**.
+**Philosophical Note**: 
+This tutorial demonstrates a **Qualitative Isomorphism** (Structural Similarity) between algorithms and biology.
+We are observing how the mathematical concept of "Cluster Consolidation" mirrors the biological process of "Sleep".
 
 **Key Concepts:**
 *   **Left Brain**: Logic, Statistics (The Librarian).
@@ -51,8 +52,9 @@ We will explore the **Bicameral Mind** (Two Hemispheres) and the **Dreamtime**.
     """
     intro_adv_cn = """
 欢迎来到更深层。
-我们知道大脑会学习。但它是如何**睡眠**的？它是如何处理**冲突**的？
-我们将探索**双脑心智**（左右脑）和**梦境时光**。
+**哲学注记**: 
+本教程展示了算法与生物学之间的**定性同构**（结构相似性）。
+我们是在观察“聚类凝练”这一数学概念是如何镜像反映“睡眠”这一生物过程的。
 
 **核心概念：**
 *   **左脑**: 逻辑，统计 (图书管理员)。
