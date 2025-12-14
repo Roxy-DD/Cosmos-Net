@@ -5,3 +5,5 @@ networkx
 scikit-learn
 scipy
 Pillow
+torch
+torchvision
