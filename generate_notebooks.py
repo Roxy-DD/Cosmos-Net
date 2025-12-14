@@ -149,8 +149,10 @@ We will explore the **Bicameral Mind** (Two Hemispheres) and the **Dreamtime**.
         cells.append({
              "cell_type": "markdown",
              "metadata": {},
-             "source": ["### ⚔️ Step 1: Conflict & Chaos / 第一步：冲突与混沌\n",
-                        "We will overload the brain with noise to create a 'Messy Mind'.\n" if not is_cn else "我们将用噪音过载大脑，创造一个“混乱的心智”。\n"]
+             "source": ["### ⚔️ Step 1: Conflict & Chaos (Simulating Sleep Deprivation) / 第一步：冲突与混沌 (模拟睡眠剥夺)\n",
+                        "To verify the power of dreams, we must first break the brain.\n" if not is_cn else "为了验证梦境的力量，我们必须先“搞坏”大脑。\n",
+                        "We will **temporarily disable** its ability to merge memories instantly (by raising `resonance_threshold` to 10.0).\n" if not is_cn else "我们将**暂时禁用**它即时融合记忆的能力（通过将 `resonance_threshold` 提高到 10.0）。\n",
+                        "This simulates **Sleep Deprivation**: The brain is forced to hold onto every piece of noisy raw data without processing it.\n" if not is_cn else "这模拟了**睡眠剥夺**：大脑被迫保留每一条嘈杂的原始数据，而无法进行处理。\n"]
         })
         
         cells.append({
